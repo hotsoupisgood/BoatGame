@@ -9,6 +9,7 @@ public class ShipMove : MonoBehaviour {
     public float timeBetweenHop = .5F;
     private Vector2 ballHullDif;
     public string pL = "pushL_P1", pR = "pushR_P1", hop = "hop_P1", tractorBeam = "tract_P1";
+    public GameObject blastL, blastR;
     // Use this for initialization
     void Start()
     {
@@ -19,17 +20,29 @@ public class ShipMove : MonoBehaviour {
     void Update()
     {
         if (Input.GetAxis(pR) != 0)
+        {
             eR.AddRelativeForce(new Vector2(0, engineForce * Input.GetAxis(pR)));
-        if (Input.GetButton(pR))//add trigger force to right engi(reletive to how hard you push
+            blastR.SetActive(true);
+        }
+        else if (Input.GetButton(pR))//add trigger force to right engi(reletive to how hard you push
         {//add force to right engine
             eR.AddRelativeForce(new Vector2(0, engineForce));
+            blastR.SetActive(true);
         }
-        if (Input.GetAxis(pL) != 0)//add trigger force for left engi(reletive to how hard you push
+        else
+            blastR.SetActive(false);
+        if (Input.GetAxis(pL) != 0)
+        {//add trigger force for left engi(reletive to how hard you push
             eL.AddRelativeForce(new Vector2(0, engineForce * Input.GetAxis(pL)));
-        if (Input.GetButton(pL))
+            blastL.SetActive(true);
+        }
+        else if (Input.GetButton(pL))
         {//add force to left engine
             eL.AddRelativeForce(new Vector2(0, engineForce));
+            blastL.SetActive(true);
         }
+        else
+            blastL.SetActive(false);
         if (Input.GetButton(hop) && (hopTime < Time.time - timeBetweenHop))
         {//hop!
             hull.AddRelativeForce(new Vector2(0, hopForce));
