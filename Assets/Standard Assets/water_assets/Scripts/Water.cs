@@ -28,7 +28,7 @@ public class Water : MonoBehaviour {
 
     //All our constants
     const float springconstant = 0.01f;
-    const float damping = 0.04f;
+    const float damping = 0.01f;
     const float spread = 0.05f;
     const float z = -1f;
 
