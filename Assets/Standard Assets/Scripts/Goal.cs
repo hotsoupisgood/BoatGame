@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Goal : MonoBehaviour {
     private ScoreController scoreController;
-    public Rigidbody2D eL, eR, hull, ball, hook;
-    private bool locked = false;
     // Use this for initialization
     void Start () {
         GameObject scoreControllerObject = GameObject.FindWithTag("ScoreManager");
@@ -19,23 +17,27 @@ public class Goal : MonoBehaviour {
     }
     void Update()
     {
-        if (locked)
-        {
-            ball.position = hook.position;
-        }
     }
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "GoalL")
+        if (other.gameObject.tag == "Ball" && gameObject.name == "Goal_L")
         {
             scoreController.AddScoreL();
-        } if(other.gameObject.tag == "GoalR")
+        } if(other.gameObject.tag == "Ball" && gameObject.name == "Goal_R")
         {
             scoreController.AddScoreR();
         }
     }
-    public void lockToHook()//a toggle
+    void OnTriggerExit2D(Collider2D other)
     {
-        locked = !locked;
+        if (other.gameObject.tag == "Ball" && gameObject.name == "Goal_L")
+        {
+            scoreController.SubScoreL();
+        }
+        if (other.gameObject.tag == "Ball" && gameObject.name == "Goal_R")
+        {
+            scoreController.SubScoreR();
+        }
     }
+
 }
