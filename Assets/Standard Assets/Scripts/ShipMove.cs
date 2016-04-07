@@ -7,7 +7,7 @@ public class ShipMove : MonoBehaviour {
     public int engineForce = 35, hopForce = -500, hookSpeed = 50;
     private float hopTime;
     public float timeBetweenHop = .5F;
-    public string pL = "pushL_P1", pR = "pushR_P1", hop = "hop_P1", tractorBeam = "tract_P1";
+    private string pL = "pushL_", pR = "pushR_", hop = "hop_", tractorBeam = "";
     public GameObject blastL, blastR;
     private bool isControlled = true;
     // Use this for initialization
@@ -15,6 +15,9 @@ public class ShipMove : MonoBehaviour {
     {
         hopTime = Time.time;
         hkScript = hook.GetComponent("Hook") as Hook;
+        pL = pL + gameObject.transform.parent.gameObject.name;
+        pR = pR + gameObject.transform.parent.gameObject.name;
+        hop = hop + gameObject.transform.parent.gameObject.name;
     }
     // Update is called once per frame
     void Update()
@@ -51,10 +54,10 @@ public class ShipMove : MonoBehaviour {
                 hull.AddRelativeForce(new Vector2(0, hopForce));
                 hopTime = Time.time;
             }
-            if (Input.GetButtonDown(tractorBeam))
-            {//shoot hook
-                hkScript.ToggleShootHook();
-            }
+            //if (Input.GetButtonDown(tractorBeam))
+            //{//shoot hook
+            //    hkScript.ToggleShootHook();
+            //}
         }
     }
     public void setControlled (bool set)

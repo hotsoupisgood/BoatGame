@@ -43,38 +43,38 @@ public class CharacterSelect : MonoBehaviour {
     public void addToLeftTeam (Collider2D other)
     {
         
-        if (other.gameObject.transform.parent.gameObject.name == "Player_1")
+        if (other.gameObject.transform.parent.gameObject.name == "P1")
         {
             setL(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_2")
+        if (other.gameObject.transform.parent.gameObject.name == "P2")
         {
             setL(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_3")
+        if (other.gameObject.transform.parent.gameObject.name == "P3")
         {
             setL(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_4")
+        if (other.gameObject.transform.parent.gameObject.name == "P4")
         {
             setL(other);
         }
     }
     public void addToRightTeam(Collider2D other)
     {
-        if (other.gameObject.transform.parent.gameObject.name == "Player_1")
+        if (other.gameObject.transform.parent.gameObject.name == "P1")
         {
             setR(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_2")
+        if (other.gameObject.transform.parent.gameObject.name == "P2")
         {
             setR(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_3")
+        if (other.gameObject.transform.parent.gameObject.name == "P3")
         {
             setR(other);
         }
-        if (other.gameObject.transform.parent.gameObject.name == "Player_4")
+        if (other.gameObject.transform.parent.gameObject.name == "P4")
         {
             setR(other);
         }
