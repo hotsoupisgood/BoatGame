@@ -90,9 +90,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="BoatGame.CSharp.Plugins.csproj">
-      <Project>{E550CED8-3ABE-7D46-E3C5-C207C5E57999}</Project>
-      <Name>BoatGame.CSharp.Plugins</Name>
+    <ProjectReference Include="BoatGame.CSharp.csproj">
+      <Project>{89DA5697-FB93-5FBE-55B7-214A18C6A3E5}</Project>
+      <Name>BoatGame.CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

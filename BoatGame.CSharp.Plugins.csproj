@@ -64,8 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Scripts\AnchorShoot.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\BigData.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ButtonSelecta.cs" />
-    <Compile Include="Assets\Standard Assets\Scripts\CharacterSelect.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\EngineL.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\FutureMaker.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\GameController.cs" />
