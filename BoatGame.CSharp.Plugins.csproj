@@ -65,14 +65,17 @@
   <ItemGroup>
     <Compile Include="Assets\Standard Assets\Scripts\AnchorShoot.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ButtonSelecta.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\CharacterSelect.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\EngineL.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Goal.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Hook.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\LeftRightSelector.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\Restarter.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ScoreController.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\ShipMove.cs" />
+    <Compile Include="Assets\Standard Assets\Scripts\ShipSelector.cs" />
     <Compile Include="Assets\Standard Assets\Scripts\StickyCamera.cs" />
     <Compile Include="Assets\Standard Assets\water_assets\Scripts\Water.cs" />
     <Compile Include="Assets\Standard Assets\water_assets\Scripts\WaterDetector.cs" />
